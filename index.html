@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RR Admin Hub</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23113366'/%3E%3Crect x='8' y='8' width='16' height='6' fill='%23ee4d2d'/%3E%3Crect x='8' y='18' width='16' height='6' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+
+  <header class="top">
+    <div class="top-in">
+      <a class="brand" href="#materials"><span class="mark" aria-hidden="true"></span>RR Admin Hub</a>
+      <nav id="nav" aria-label="Pages">
+        <a href="#materials" data-page="materials">Materials</a>
+        <a href="#todo" data-page="todo">To Do</a>
+        <a href="#pics" data-page="pics">Project PICs</a>
+        <a href="#updates" data-page="updates">Manager Updates</a>
+      </nav>
+      <button class="btn-light" id="btnSettings" type="button">Settings &amp; Backup</button>
+    </div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <dialog id="dlg" aria-labelledby="dlgTitle"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="importFile" accept="application/json,.json" hidden>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
